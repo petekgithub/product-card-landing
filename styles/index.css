@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Montserrat:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(30, 38%, 92%);
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 30px auto;
+  padding: 0 30px;
+}
+
+.grid {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden; /* four corner go the border*/
+}
+
+.imgBox img {
+  max-width: 100%;
+  display: inherit;
+}
+
+.contentBox {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h6.perfume {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 13px;
+  color: hsl(228, 12%, 48%);
+  font-weight: 500;
+}
+
+h2.name {
+  font-family: "Fraunces", serif;
+  font-size: 34px;
+  line-height: 1em;
+  color: hsl(212, 21%, 14%);
+}
+
+p.desc {
+  color: hsl(228, 12%, 48%);
+  line-height: 1.6em;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+}
+
+p.high-price {
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 25px;
+  padding-right: 25px;
+}
+
+p.low-price {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+
+.btn {
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  padding: 14px 0;
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: hsl(158, 36%, 23%);
+}
+
+.btn img {
+  padding-right: 7px;
+}
+
+/* for responsiveness */
+@media only screen and (max-width: 628px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imgBox img {
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .contentBox {
+    display: block;
+  }
+
+  h6.perfume,
+  h2.name,
+  p.desc,
+  .prices {
+    padding-bottom: 23px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    margin: 15px 0;
+    padding: 0 15px;
+  }
+
+  .imgBox img {
+    max-height: 290px;
+  }
+
+  .contentBox {
+    padding: 24px;
+  }
+
+  h6.perfume,
+  h2.name,
+  p.desc,
+  .prices {
+    padding-bottom: 16px;
+  }
+
+  h2.name {
+    font-size: 28px;
+  }
+
+  p.desc {
+    font-size: 12px;
+  }
+
+  p.high-price {
+    font-size: 23px;
+  }
+
+  .btn {
+    padding: 12px 0;
+    font-size: 13px;
+  }
+}
